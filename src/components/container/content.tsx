@@ -45,7 +45,6 @@ export const TrustedBrands = () => (
         alt="postman"
         className="h-8"
       />
-
     </div>
   </section>
 );
