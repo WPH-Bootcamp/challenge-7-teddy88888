@@ -3,9 +3,12 @@ import { HeroSection } from "./components/container/HeroSection/heroSection";
 import { ProcessSection } from "./components/container/processSection";
 import { StatCard } from "./components/ui/statcard";
 import { IndustrySection } from "./components/container/industry";
-import { Button } from "./components/ui/Button/Button";
 import { TrustedBrands } from "./components/container/content";
-
+import { FeatureCards } from "./components/ui/Button/featureCard";
+import { FaqSection } from "./components/container/FaqSection";
+import { Contact } from "./components/container/contact";
+import { ContactSection } from "./components/container/ContactSection";
+import { Footer } from "./components/container/Footer";
 function App() {
   return (
     <main className="bg-black min-h-screen font-sans selection:bg-[#FF5733] selection:text-white">
@@ -16,37 +19,40 @@ function App() {
 
       <TrustedBrands />
 
-     
-        {/* Stats Section */}
-      <section className="py-20 flex flex-wrap justify-center gap-8 bg-black">
-          <StatCard value="50+" label="Projects Completed" />
-          <StatCard value="5+" label="Years Experience" />
-          <StatCard value="10+" label="Industry Experts" />
-          <StatCard value="100%" label="Client Satisfaction" />
-        </section>
-
-        {/* Process Section */}
-        <ProcessSection />
-        
-        {/* Industry Section (Fitur Utama) */}
-        <IndustrySection />
-      
-     
-      
-
-      {/* Footer CTA */}
-      <section className="bg-zinc-900 mx-6 md:mx-24 mb-24 rounded-3xl py-16 px-8 text-center border border-zinc-800">
-        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-          Ready to Start? Let's Talk
-        </h2>
-        <p className="text-zinc-400 mb-10">
-          Transform your business with our expert IT solutions.
-        </p>
-        <Button>Contact Us Now</Button>
+      {/* Bagian Grid FeatureCard */}
+      <section className="py-24 px-6 md:px-24 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{new Map()}</div>
       </section>
 
+      {/* Features Section */}
+      <section className="py-20 px-6 md:px-24">
+        <FeatureCards />
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 flex flex-wrap justify-center gap-8 bg-black">
+        <StatCard value="50+" label="Projects Completed" />
+        <StatCard value="5+" label="Years Experience" />
+        <StatCard value="10+" label="Industry Experts" />
+        <StatCard value="100%" label="Client Satisfaction" />
+      </section>
+
+      {/* Process Section */}
+      <ProcessSection />
+
+      {/* Industry Section (Fitur Utama) */}
+      <IndustrySection />
+
+      <FaqSection />
+
+      <Contact />
+
+      <ContactSection />
+
+      {/* Footer CTA */}
+      <Footer />
       {/* Footer Bottom */}
-      <footer className="py-12 px-6 md:px-24 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6">
+      {/* <footer className="py-12 px-6 md:px-24 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6">
         <p className="text-zinc-500 text-sm">
           © 2024 TechCorp. All rights reserved.
         </p>
@@ -55,6 +61,14 @@ function App() {
           <a href="#">Terms of Service</a>
         </div>
       </footer>
+      <div className="flex gap-6 text-zinc-500 text-sm">
+        <a href="#" className="hover:text-white transition">
+          Privacy Policy
+        </a>
+        <a href="#" className="hover:text-white transition">
+          Terms of Service
+      //   </a> */}
+      {/* // </div> */}
     </main>
   );
 }
